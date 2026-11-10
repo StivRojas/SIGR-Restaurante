@@ -6,6 +6,9 @@ const cors = require('cors');
 const initializeDatabase =
 require('./database/initDB');
 
+const menuRoutes =
+require('./routes/menuRoutes');
+
 const authRoutes =
 require('./routes/authRoutes');
 
@@ -26,6 +29,11 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 
+app.use(
+    '/api/menu',
+    menuRoutes
+);
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
@@ -35,3 +43,4 @@ app.listen(PORT, () => {
     );
 
 });
+
