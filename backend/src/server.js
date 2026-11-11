@@ -12,6 +12,9 @@ require('./routes/menuRoutes');
 const authRoutes =
 require('./routes/authRoutes');
 
+const reservaRoutes =
+require('./routes/reservaRoutes');
+
 const app = express();
 
 app.use(cors());
@@ -32,6 +35,11 @@ app.use('/api/auth', authRoutes);
 app.use(
     '/api/menu',
     menuRoutes
+);
+
+app.use(
+    '/api/reservas',
+    reservaRoutes
 );
 
 const PORT = process.env.PORT || 3000;
