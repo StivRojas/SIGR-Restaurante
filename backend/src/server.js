@@ -18,6 +18,10 @@ require('./routes/reservaRoutes');
 const pedidoRoutes =
 require('./routes/pedidoRoutes');
 
+const reporteRoutes =
+require('./routes/reporteRoutes');
+console.log('Reportes cargados');
+
 const app = express();
 
 app.use(cors());
@@ -49,6 +53,12 @@ app.use(
     '/api/pedidos',
     pedidoRoutes
 );
+
+app.use(
+    '/api/reportes',
+    reporteRoutes
+);
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
