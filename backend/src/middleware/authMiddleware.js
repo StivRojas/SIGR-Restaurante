@@ -4,9 +4,12 @@ const authMiddleware = (req, res, next) => {
 
     const authHeader = req.headers.authorization;
 
+    console.log("HEADER:");
+    console.log(authHeader);
+
     if (!authHeader) {
         return res.status(401).json({
-            mensaje: 'Token requerido'
+            mensaje: "Token requerido"
         });
     }
 
@@ -26,7 +29,7 @@ const authMiddleware = (req, res, next) => {
     } catch (error) {
 
         return res.status(401).json({
-            mensaje: 'Token inválido'
+            mensaje: "Token inválido"
         });
 
     }
