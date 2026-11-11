@@ -41,7 +41,9 @@ function initializeDatabase() {
         db.run(`
         CREATE TABLE IF NOT EXISTS pedidos (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            mesa INTEGER,
+            cliente TEXT NOT NULL,
+            mesa INTEGER NOT NULL,
+            total REAL DEFAULT 0,
             estado TEXT DEFAULT 'Pendiente',
             fecha DATETIME DEFAULT CURRENT_TIMESTAMP
         )

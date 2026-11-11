@@ -15,6 +15,9 @@ require('./routes/authRoutes');
 const reservaRoutes =
 require('./routes/reservaRoutes');
 
+const pedidoRoutes =
+require('./routes/pedidoRoutes');
+
 const app = express();
 
 app.use(cors());
@@ -42,6 +45,10 @@ app.use(
     reservaRoutes
 );
 
+app.use(
+    '/api/pedidos',
+    pedidoRoutes
+);
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
