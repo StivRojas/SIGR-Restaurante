@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
+    const logout = () => {
+
+        localStorage.removeItem("token");
+
+        window.location.href = "/";
+    };
+
     return (
 
         <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
@@ -46,6 +53,13 @@ function Navbar() {
                     </Link>
 
                 </div>
+
+                <button
+                    className="btn btn-danger"
+                    onClick={logout}
+                >
+                    Salir
+                </button>
 
             </div>
 

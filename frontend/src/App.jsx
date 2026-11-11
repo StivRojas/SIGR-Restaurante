@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 import Login from "./pages/Login";
 import Menu from "./pages/Menu";
