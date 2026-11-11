@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        return null;
+    }
+
     const logout = () => {
 
         localStorage.removeItem("token");
@@ -17,7 +23,7 @@ function Navbar() {
 
                 <Link
                     className="navbar-brand"
-                    to="/"
+                    to="/menu"
                 >
                     SIGR
                 </Link>
@@ -64,6 +70,7 @@ function Navbar() {
             </div>
 
         </nav>
+
     );
 }
 

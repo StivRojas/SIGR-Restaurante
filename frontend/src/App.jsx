@@ -7,9 +7,9 @@ import {
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-import Login from "./pages/Login";
-import Menu from "./pages/Menu";
-import Reservas from "./pages/Reservas.jsx";
+import Login from "./pages/login";
+import Menu from "./pages/menu";
+import Reservas from "./pages/Reservas";
 import Pedidos from "./pages/Pedidos";
 import Reportes from "./pages/Reportes";
 
@@ -30,22 +30,38 @@ function App() {
 
         <Route
           path="/menu"
-          element={<Menu />}
+          element={
+            <ProtectedRoute>
+              <Menu />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/reservas"
-          element={<Reservas />}
+          element={
+            <ProtectedRoute>
+              <Reservas />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/pedidos"
-          element={<Pedidos />}
+          element={
+            <ProtectedRoute>
+              <Pedidos />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/reportes"
-          element={<Reportes />}
+          element={
+            <ProtectedRoute>
+              <Reportes />
+            </ProtectedRoute>
+          }
         />
 
       </Routes>

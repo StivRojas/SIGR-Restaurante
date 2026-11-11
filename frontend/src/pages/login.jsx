@@ -1,12 +1,10 @@
 import { useState } from "react";
 import api from "../services/api";
-import { useNavigate } from "react-router-dom";
 
-function login() {
+function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate("/navigate");
 
     const handleLogin = async (e) => {
 
@@ -27,17 +25,16 @@ function login() {
                 response.data.token
             );
 
-            alert("Login exitoso");
-            console.log(api.defaults.baseURL);
-            navigate("/menu");
-
+            window.location.href = "/menu";
 
         } catch (error) {
 
-            console.error(error.response);
-            console.error(error.config.url);
+            console.error(error);
 
-            alert("Credenciales incorrectas");
+            alert(
+                "Usuario o contraseña incorrectos"
+            );
+
         }
     };
 
@@ -106,6 +103,7 @@ function login() {
                             </form>
 
                         </div>
+
                     </div>
 
                 </div>
@@ -113,7 +111,8 @@ function login() {
             </div>
 
         </div>
+
     );
 }
 
-export default login;
+export default Login;

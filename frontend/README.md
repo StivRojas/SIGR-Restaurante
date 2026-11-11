@@ -1,16 +1,238 @@
-# React + Vite
+# 🍽️ SIGR
+## Sistema Integral de Gestión de Restaurante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19-blue)
+![Node.js](https://img.shields.io/badge/Node.js-Express-green)
+![SQLite](https://img.shields.io/badge/SQLite-Database-lightblue)
+![JWT](https://img.shields.io/badge/JWT-Security-orange)
+![GitHub](https://img.shields.io/badge/GitHub-VersionControl-black)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 Descripción
 
-## React Compiler
+SIGR es una aplicación web desarrollada para la gestión integral de un restaurante.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Permite administrar:
 
-## Expanding the ESLint configuration
+- 🔐 Usuarios
+- 🍔 Menú
+- 📅 Reservas
+- 🧾 Pedidos
+- 📊 Reportes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖼️ Vista General
+
+```text
+Cliente
+    │
+    ▼
+Frontend React
+    │
+Axios
+    │
+    ▼
+Backend Express
+    │
+JWT
+    │
+    ▼
+SQLite
+```
+
+---
+
+# 🚀 Tecnologías
+
+| Frontend | Backend | Base de Datos |
+|-----------|-----------|--------------|
+| React | Node.js | SQLite |
+| Vite | Express | SQLite3 |
+| Bootstrap | JWT | |
+| Axios | bcryptjs | |
+
+---
+
+# ✨ Funcionalidades
+
+## 🔐 Autenticación
+
+- Inicio de sesión
+- JWT
+- Protección de rutas
+- Logout
+
+---
+
+## 🍽️ Gestión de Menú
+
+✅ Crear platos
+
+✅ Listar platos
+
+✅ Eliminar platos
+
+✅ Actualizar platos
+
+---
+
+## 📅 Gestión de Reservas
+
+✅ Crear reserva
+
+✅ Listar reservas
+
+✅ Eliminar reservas
+
+✅ Actualizar reservas
+
+---
+
+## 🧾 Gestión de Pedidos
+
+✅ Crear pedido
+
+✅ Cambiar estado
+
+✅ Consultar pedidos
+
+### Estados
+
+- Pendiente
+- Preparando
+- Listo
+- Entregado
+
+---
+
+## 📊 Dashboard
+
+Visualización de:
+
+- Total pedidos
+- Total reservas
+- Total ingresos
+
+---
+
+# 📂 Estructura
+
+```text
+SIGR
+│
+├── backend
+│   ├── src
+│   │   ├── config
+│   │   ├── controllers
+│   │   ├── database
+│   │   ├── middleware
+│   │   ├── routes
+│   │   └── server.js
+│
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── services
+│   │   └── App.jsx
+│
+└── README.md
+```
+
+---
+
+# ⚙️ Instalación
+
+## Backend
+
+```bash
+cd backend
+
+npm install
+
+npm run dev
+```
+
+Servidor:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Aplicación:
+
+```text
+http://localhost:5173
+```
+
+---
+
+# 🔑 Variables de entorno
+
+```env
+PORT=3000
+
+JWT_SECRET=sigr_secret_2026
+
+DB_NAME=sigr.db
+```
+
+---
+
+# 🧪 Pruebas
+
+Las pruebas de la API se realizaron utilizando:
+
+- Bruno
+- JWT
+- SQLite
+
+---
+
+# 👨‍💻 Autor
+
+**Jerson Stiv Rojas Gonzalez**
+
+Ingeniería de Software
+
+---
+
+# 📌 Estado del Proyecto
+
+✅ Backend finalizado
+
+✅ Frontend funcional
+
+✅ JWT implementado
+
+✅ CRUD Menú
+
+✅ CRUD Reservas
+
+✅ CRUD Pedidos
+
+✅ Dashboard
+
+✅ GitHub
+
+---
+
+## 🏆 Versión
+
+```text
+v1.0 Baseline
+```
