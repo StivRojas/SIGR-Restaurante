@@ -25,7 +25,7 @@ function Navbar() {
                     className="navbar-brand"
                     to="/menu"
                 >
-                    SIGR
+                    🍽️ SIGR
                 </Link>
 
                 <div className="navbar-nav">
